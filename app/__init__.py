@@ -1,3 +1,5 @@
+import os
+
 # third-party imports
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
@@ -54,5 +56,4 @@ def create_app(config_name):
     def internal_server_error(error):
         return render_template('errors/500.html', title='Server Error'), 500
 
-    
     return app
